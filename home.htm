@@ -4,21 +4,34 @@
 <head>
     <title>Home | EmergencyBattle</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="styleTablet.css">
+    <link rel="stylesheet" type="text/css" href="styleDesktop.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script>
-            var text1 = "This is Emilia's portfolio site, where you can find her games, illustrations and interaction design projects, as well as a short bio and her contact info.";
-            var text2 = "What would you like to do?";
+            var text1 = "안녕하세요! Emilia is in Korea right now, but if you need help I\'m here to guide you!"
+            var text2 = "This is Emilia's portfolio site, where you can find her games, illustrations and interaction design projects, as well as a short bio and her contact info.";
+            var text3 = "What would you like to do?";
         //set the first message the mascot character will say
-        window.onload = function starting () {document.getElementById("changetext").innerHTML = "안녕하세요! Emilia is in Korea right now, but if you need help I\'m here to guide you!";
+        window.onload = function starting () {
+            document.getElementById("changetext").innerHTML = text1;
+            
         }
      
         //set what will happen once you click the textbox
         function characterDialogue(){
+            var current = document.getElementById('changetext').innerHTML;
+            var options = document.getElementById('dialogueoptionwrapper');
             
-            //if (#changetext == "안녕하세요! Emilia is in Korea right now, but if you need help I\'m here to guide you!"){
-                document.getElementById('changetext').innerHTML = text1 ;
-            //}
+            if (current == text1){
+                document.getElementById('changetext').innerHTML = text2 ;
+            }
+            if (current == text2){
+                document.getElementById('changetext').innerHTML = text3 ;
+            }
+            if (current == text3){
+                options.style.visibility = 'visible' ;
+            }
         }
     </script>
 
@@ -31,32 +44,80 @@
         EmergencyBattle
     </div>
     
+    <div class="logo">
+        <a href="home.htm"><img class="logoimage" src="images/logo.png" alt="logo in the shape of a stylised manatee sliced in half with a simple flower as eyes and tail pattern"></a>
+    </div>
+    
     <div class="menubar">
             <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type = "text/css">
             <a href="home.htm"><div class="menubutton">Home</div></a>
-            <a href="games.htm"><div class="menubutton">Games</div></a>
+            <a href="games.htm"><div class="menubutton">Games & projects</div></a>
             <a href="illustrations.htm"><div class="menubutton">Illustrations</div></a>
-            <a href="interaction.htm"><div class="menubutton">Interaction</div></a>
             <a href="about.htm"><div class="menubutton">About</div></a>
             <a href="shop.htm"><div class="menubutton">Shop</div></a>
+    </div>
+
+    <div class="mobilemenu">
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
+        <div class="buttoncontainer">
+            <a href="home.htm"><img class="buttonimage" src="images/BtnHome.png" alt="Home Button" height="40%" width="40%"></a>
+            <a href="games.htm"><img class="buttonimage" src="images/BtnGames.png" alt="Games Button" height="40%" width="40%"></a>
+        </div>
+        <div class="buttoncontainer">
+            <a href="illustrations.htm"><img class="buttonimage" src="images/BtnIllustration.png" alt="Illustrations Button" height="40%" width="40%"></a>
+            <a href="about.htm"><img class="buttonimage" src="images/BtnAbout.png" alt="About Button" height="40%" width="40%"></a>
+        </div>
+        <div class="buttoncontainer">
+            <a href="shop.htm"><img class="buttonimage_center" src="images/BtnShop.png" alt="Shop Button" height="40%" width="40%"></a>
+        </div>
     </div>
 
     <div class="textbox">
             <picture class="textboxspeechimagebox">
                 <source srcset="images/textboxspeech.png" media="(min-width: 769px)">
-                <source srcset="images/textboxspeech.png" media="(min-width: 600px)">
-                <img class="textboximage" src="images/textboxspeech.png" alt="textbox for speech">
+                <source srcset="images/textboxspeech.png" media="(min-width: 600px) and (orientation: landscape)">
+                <source srcset="images/SpeechBubbleiPad.png" media="(min-width: 600px) and (orientation: portrait)">
+                <source srcset="images/textboxspeech.png" media="(min-width: 300px) and (orientation: landscape)">
+                <img class="textboximage" src="images/SpeechBubbleiPad.png" alt="textbox for speech">
             </picture>
             <div class="textboxspeechtext">
                 <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type = "text/css">
                     <p id="changetext"></p>
             </div>
+            <div class="portraittext">
+                <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type = "text/css">
+                    Please turn your device on its side into landscape orientation! ( *uOu* )
+            </div>
+    </div>
+    
+    <div class="dialogueoptionwrapper">
+        <div class="dowinner">
+            <div class="optionwrapper">
+                <a href="games.htm"><img class="optionsimage" src="images/DialogueOptionBubble.png" alt="box for options">
+                    <div class="optionstext">
+                    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type = "text/css">
+                    Show me games and projects!
+                    </div></a>
+        
+                <a href="illustrations.htm"><img class="optionsimage" src="images/DialogueOptionBubble.png" alt="box for options">
+                    <div class="optionstext">
+                    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type = "text/css">
+                    Show me illustrations!
+                    </div></a>
+
+                <a href="about.htm"><img class="optionsimage" src="images/DialogueOptionBubble.png" alt="box for options">
+                    <div class="optionstext">
+                    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type = "text/css">
+                    Tell me more about Emilia.
+                    </div></a>
+            </div>
+        </div>
     </div>
     
     <picture class="character1">
         <source srcset="images/Bruce.png" media="(min-width: 769px)">
         <source srcset="images/Bruce.png" media="(min-width: 600px)">
-        <source srcset="images/Bruce.png">
+        <source srcset="images/mobilebanner.png">
         <img class="characterimage" src="images/Bruce.png" alt="Mobile banner">
     </picture>
     

@@ -1,0 +1,144 @@
+﻿
+@media only screen and (min-width: 700px) and (orientation: portrait) {
+    /* For tablets: PORTRAIT */
+    
+    
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+    
+
+    
+.header {
+    font-size: 6em;
+    -webkit-text-stroke-width: 2px;
+    top:5%;
+
+}
+    
+.menubar{
+    visibility: hidden;
+}
+
+.characterimage {
+    visibility: hidden;
+
+    }
+
+
+.textboximage {
+    display:block;
+    top: 10%;
+    width:90%;
+}
+
+.textboxspeechtext {
+    visibility: hidden;
+}
+
+
+
+.portraittext {
+    visibility: visible;
+    top: 10%;
+    padding-top:40%;
+    padding-left:13%;
+    padding-right:13%;
+    font-size:2em;
+}
+
+.dialogueoptionwrapper {
+    visibility: hidden;
+}
+
+.optionsimage {
+    visibility:hidden;
+
+    }
+
+}
+
+
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+@media only screen and (min-width: 740px) and (orientation: landscape) {
+    /* For tablets: LANDSCAPE */
+    
+    
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+    
+html {
+    height:100%;
+}
+
+body {
+    background-image: url('images/DropDownBG.png');    
+    background-size: cover; 
+    background-position:center;
+    width: 100%;
+    height: auto;
+    }
+
+.header {
+    font-size: 5em;
+    -webkit-text-stroke-width: 2px;
+    top:3%;
+}    
+
+.logoimage {
+    bottom: 9%;
+}
+
+.menubar{
+    position: fixed;
+    bottom:2%;
+    right:5%;
+    z-index:50;
+}
+.menubutton{
+    font-size: 1.7em;
+    margin-left: 20px;
+    -webkit-text-stroke-width: 1px;
+}
+
+.textbox {
+    position: fixed;
+    top: 73%;
+    z-index:2;
+}
+
+.textboxspeechtext {
+    padding-top: 0.6%;
+    padding-bottom: 1.5%;
+    padding-left: 15%;
+    padding-right: 8%;
+    font-size:1.5em;
+}
+
+
+.portraittext {
+    visibility:hidden;
+}
+}
