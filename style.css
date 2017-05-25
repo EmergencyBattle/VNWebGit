@@ -6,15 +6,15 @@
 
 [class*="col-"] {
     float: left;
-    padding: 15px;
-    border: 1px solid red;
+    /*padding: 15px;
+    border: 1px solid red;*/
 }
 
 /*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 /* For mobile phones PORTRAIT: */
 
-/*@media only screen and (min-width: 300px) and {*/
+@media only screen and (min-width: 300px) and (orientation: portrait){
 [class*="col-"] {
     width: 100%;
 }
@@ -66,11 +66,14 @@ body {
 .mobilemenu{
     position: fixed;
     height: auto;
-    width: auto;
-    top: 27%;
+    top: 25%;
     left:auto;
     right:auto;
-    margin: 0 auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5%;
 
 }
 
@@ -78,27 +81,48 @@ body {
 
     margin-left:auto;
     margin-right:auto;
+    display: block;
+    left: auto;
+    right: auto;
+
 }
+
+.columnLeft {
+        position: fixed;
+        width: 50%;
+        height: auto;
+        left: 0;
+        padding-left: 10%;
+    }
+
+.columnRight {
+        position: fixed;
+        width: 50%;
+        height: auto;
+        right: 0;
+        padding-right: 10%;
+    }
+
+.columnMiddle {
+        position: fixed;
+        margin-left:20%;
+        width: 50%;
+        height: auto;
+        top: 67%;
+    }
+
 
 .buttonimage {
-    float:left;
     display: block;
     left: auto;
     right: auto;
     margin-left: auto;
     margin-right: auto;
     z-index:1;
-}
+    width: 130px;
+    height: auto;
 
-.buttonimage_center {
-    display: block;
-    left: auto;
-    right: auto;
-    margin-left: auto;
-    margin-right: auto;
-    z-index:1;
 }
-
 
 .menubutton{
     float:left;
@@ -214,7 +238,7 @@ body {
 .optionsimage {
     visibility:hidden;
     }
-
+}
 /*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 /* For mobile phones LANDSCAPE: */
@@ -289,126 +313,63 @@ body {
     height: 15%;
     width: auto;
     display: block;
-    margin-left: 1%;
+    margin-left: 2%;
     margin-right:auto;
-    bottom: 13%;
+    bottom: 5%;
     left:0px;
     right: 0px; 
 
 }
 
-.character1 {
-    width: 100%;
-    height: 100%;
+.mobilemenu{
     position: fixed;
+    height: auto;
+    top: 5%;
+    left:auto;
+    right:auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5%;
+    float: left;
+
+}
+
+.buttoncontainer{
+    float: left;
+    width: 200px;
+
+}
+
+.buttonimage {
+    z-index:1;
+    float: left;
+    width: 100px;
+    height: auto;
+
+}
+
+.buttonimage_center {
+    z-index:1;
+    width: 100px;
 }
 
 .characterimage {
-    position:fixed;
-    height: 110%;
-    width: auto;
-    display: block;
-    margin-left: auto;
-    margin-right:auto;
-    top: 2%;
-    left:0px;
-    right: 0px; 
-    z-index:1;
+    visibility: hidden;
 }
-
-.textbox {
-    position: fixed;
-    top: 65%;
-    z-index:2;
-    }
-    
-.textboxspeechimagebox {
-    position: fixed;
-    width:80%;
-}
-
-.textboximage {
-    display:block;
-    z-index:2;
-    position:fixed;
-    margin-left: auto;
-    margin-right:auto;
-    left:0;
-    right:0;
-    width:90%;
-}
-
-.textboxspeechtext {
-    position:fixed;
-    margin-left: auto;
-    margin-right:auto;
-    left:0;
-    right:0;
-    width:90%;
-    padding-top:0.5%;
-    padding-bottom:20px;
-    padding-left:80px;
-    padding-right:50px;
-    
-    
-    font-family: 'PT Sans', sans-serif;
-    font-size:1.1em;
-}
-
-.dialogueoptionwrapper {
-    position: fixed;
-    z-index:50;
-    width:100%;
-    height:100%;
-    background: rgba(0,0,0,0.5);
-    visibility: ;
-    }
-    
-.dowinner {
-    position:fixed;
-    margin-top: 5%;
-    margin-bottom:  auto;
-    }
-
-.optionwrapper {
-    width: 90%;
-    margin-left: auto;
-    margin-right:auto;
-
-    }
-    
-.optionsimage {
-    visibility:hidden;
-    z-index:51;
-    margin-left: auto;
-    margin-right:auto;
-    left:0;
-    right:0;
-    width:100%;
-    }
-
-.optionstext {
-    position:fixed;
-    margin-left: auto;
-    margin-right:auto;
-    margin-top:-6%;
-    left:0;
-    right:0;
-    width:90%;
-    padding-top:0%;
-    padding-bottom:20px;
-    padding-left:50px;
-    padding-right:50px;
-    
-    
-    font-family: 'PT Sans', sans-serif;
-    color: white;
-    font-size:1.1em;
-    }            
 
 .portraittext {
     visibility: hidden;
 }
+
+.textbox {
+    visibility: hidden;
+    }
+
+.dialogueoptionwrapper {
+    visibility: hidden;
+    }
 
 }
 

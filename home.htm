@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="styleTablet.css">
     <link rel="stylesheet" type="text/css" href="styleDesktop.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="VNWebScript.js"></script>
 
     <script>
             var text1 = "Hej! Emilia is writing her Bachelor's thesis right now, but if you need help I\'m here to guide you!"
@@ -22,6 +23,11 @@
         function characterDialogue(){
             var current = document.getElementById('changetext').innerHTML;
             var options = document.getElementById('dialogueoptionwrapper');
+            var optionsimage1 = document.getElementById('optionsimage1');
+            var optionsimage2 = document.getElementById('optionsimage2');
+            var optionsimage3 = document.getElementById('optionsimage3');
+            var optionsimage4 = document.getElementById('optionsimage4');
+            var optionsimage5 = document.getElementById('optionsimage5');
             
             if (current == text1){
                 document.getElementById('changetext').innerHTML = text2 ;
@@ -29,10 +35,17 @@
             if (current == text2){
                 document.getElementById('changetext').innerHTML = text3 ;
             }
-            if (current == text3){
-                options.style.visibility = 'visible' ;
+            if (current == text3) {
+                console.log("hej");
+                options.style.visibility = 'visible';
+                optionsimage1.style.visibility = 'visible';
+                optionsimage2.style.visibility = 'visible';
+                optionsimage3.style.visibility = 'visible';
+                optionsimage4.style.visibility = 'visible';
+                optionsimage5.style.visibility = 'visible';
             }
         }
+
     </script>
 
 </head>
@@ -59,16 +72,16 @@
 
     <div class="mobilemenu">
         <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
-        <div class="buttoncontainer">
-            <a href="home.htm"><img class="buttonimage" src="images/BtnHome.png" alt="Home Button" height="40%" width="40%"></a>
-            <a href="games.htm"><img class="buttonimage" src="images/BtnGames.png" alt="Games Button" height="40%" width="40%"></a>
+        <div class="columnLeft">
+            <a href="home.htm"><img class="buttonimage" src="images/BtnHome.png" alt="Home Button"></a>
+            <a href="games.htm"><img class="buttonimage" src="images/BtnGames.png" alt="Games Button"></a>
         </div>
-        <div class="buttoncontainer">
-            <a href="illustrations.htm"><img class="buttonimage" src="images/BtnIllustration.png" alt="Illustrations Button" height="40%" width="40%"></a>
-            <a href="about.htm"><img class="buttonimage" src="images/BtnAbout.png" alt="About Button" height="40%" width="40%"></a>
+        <div class="columnRight">
+            <a href="illustrations.htm"><img class="buttonimage" src="images/BtnIllustration.png" alt="Illustrations Button"></a>
+            <a href="about.htm"><img class="buttonimage" src="images/BtnAbout.png" alt="About Button"></a>
         </div>
-        <div class="buttoncontainer">
-            <a href="shop.htm"><img class="buttonimage_center" src="images/BtnShop.png" alt="Shop Button" height="40%" width="40%"></a>
+        <div class="columnMiddle">
+            <a href="shop.htm"><img class="buttonimage" src="images/BtnShop.png" alt="Shop Button"></a>
         </div>
     </div>
 
@@ -90,27 +103,43 @@
             </div>
     </div>
     
-    <div class="dialogueoptionwrapper">
+    <div class="dialogueoptionwrapper" id="dialogueoptionwrapper">
         <div class="dowinner">
             <div class="optionwrapper">
-                <a href="games.htm"><img class="optionsimage" src="images/DialogueOptionBubble.png" alt="box for options">
+                <a href="games.htm"><img class="optionsimage" id="optionsimage1" src="images/DialogueOptionBubble.png" alt="box for options">
                     <div class="optionstext">
                     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type = "text/css">
                     Show me games and projects!
                     </div></a>
         
-                <a href="illustrations.htm"><img class="optionsimage" src="images/DialogueOptionBubble.png" alt="box for options">
+                <a href="illustrations.htm"><img class="optionsimage" id="optionsimage2" src="images/DialogueOptionBubble.png" alt="box for options">
                     <div class="optionstext">
                     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type = "text/css">
                     Show me illustrations!
                     </div></a>
 
-                <a href="about.htm"><img class="optionsimage" src="images/DialogueOptionBubble.png" alt="box for options">
+                <a href="about.htm"><img class="optionsimage" id="optionsimage3" src="images/DialogueOptionBubble.png" alt="box for options">
                     <div class="optionstext">
                     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type = "text/css">
                     Tell me more about Emilia.
                     </div></a>
-            </div>
+
+                <a href="shop.htm">
+                    <img class="optionsimage" id="optionsimage4" src="images/DialogueOptionBubble.png" alt="box for options">
+                    <div class="optionstext">
+                        <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
+                        I wanna see what's for sale.
+                    </div>
+                </a>
+
+                <a href="home.htm">
+                    <img class="optionsimage" id="optionsimage5" src="images/DialogueOptionBubble.png" alt="box for options">
+                    <div class="optionstext">
+                        <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
+                        Uhhh, nothing, thanks...
+                    </div>
+                </a>
+</div>
         </div>
     </div>
     

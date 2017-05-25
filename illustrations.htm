@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="styleTablet.css">
     <link rel="stylesheet" type="text/css" href="styleDesktop.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="VNWebScript.js"></script>
 
 </head>
 
@@ -26,7 +27,186 @@
             <a href="shop.htm"><div class="menubutton">Shop</div></a>
     </div>
 
-    
+    <div class="gallery">
+        <img class="thumbnail" onclick="openModal();currentSlide(1)" src="images/thumbnail/alimermthumb.png"/>
+        <img class="thumbnail" onclick="openModal();currentSlide(2)" src="images/thumbnail/succulentthumb.png" />
+        <img class="thumbnail" onclick="openModal();currentSlide(3)" src="images/thumbnail/demonservantthumb.png" />
+        <img class="thumbnail" onclick="openModal();currentSlide(4)" src="images/thumbnail/angelselflessnessthumb.png" />
+        <img class="thumbnail" onclick="openModal();currentSlide(5)" src="images/thumbnail/amputationthumb.png" />
+        <img class="thumbnail" onclick="openModal();currentSlide(6)" src="images/thumbnail/hogguardthumb.png" />
+        <img class="thumbnail" onclick="openModal();currentSlide(7)" src="images/thumbnail/beeltethumb.png" />
+        <img class="thumbnail" onclick="openModal();currentSlide(8)" src="images/thumbnail/bedheadthumb.png" />
+        <img class="thumbnail" onclick="openModal();currentSlide(9)" src="images/thumbnail/blueberrythumb.png" />
+        <img class="thumbnail" onclick="openModal();currentSlide(10)" src="images/thumbnail/choppitythumb.png" />
+        <img class="thumbnail" onclick="openModal();currentSlide(11)" src="images/thumbnail/digiwitchthumb.png" />
+        <img class="thumbnail" onclick="openModal();currentSlide(12)" src="images/thumbnail/galaxyalienthumb.png" />
+        <img class="thumbnail" onclick="openModal();currentSlide(13)" src="images/thumbnail/guardthumb.png" />
+        <img class="thumbnail" onclick="openModal();currentSlide(14)" src="images/thumbnail/heartfeltthumb.png" />
+        <img class="thumbnail" onclick="openModal();currentSlide(15)" src="images/thumbnail/hellhorsethumb.png" />
+        <img class="thumbnail" onclick="openModal();currentSlide(16)" src="images/thumbnail/limbsthumb.png" />
+        <img class="thumbnail" onclick="openModal();currentSlide(17)" src="images/thumbnail/russianroulettethumb.png" />
+        <img class="thumbnail" onclick="openModal();currentSlide(18)" src="images/thumbnail/seythumb.png" />
+        <img class="thumbnail" onclick="openModal();currentSlide(19)" src="images/thumbnail/tabetaithumb.png" />
+        <img class="thumbnail" onclick="openModal();currentSlide(20)" src="images/thumbnail/bouncethumb.png" />
+
+    </div>
+
+    <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+
+            <div class="mySlides">
+                <div class="numbertext">1 / 20</div>
+                <img src="images/illust/mermayalim_natural.png" class="lbimage">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">2 / 20</div>
+                <img src="images/illust/SucculentGirl.png" class="lbimage">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">3 / 20</div>
+                <img src="images/illust/DemonServant.png" class="lbimage">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">4 / 20</div>
+                <img src="images/illust/AngelSelflessness.png" class="lbimage">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">5 / 20</div>
+                <img src="images/illust/Fil000.jpg" class="lbimage">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">6 / 20</div>
+                <img src="images/illust/HOGGUARD.png" class="lbimage">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">7 / 20</div>
+                <img src="images/illust/BEEEEEETLES4.png" class="lbimage">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">8 / 20</div>
+                <img src="images/illust/hrrrm.png" class="lbimage">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">9 / 20</div>
+                <img src="images/illust/blueberry.png" class="lbimage">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">10 / 20</div>
+                <img src="images/illust/choppity.jpg" class="lbimage">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">11 / 20</div>
+                <img src="images/illust/catwitch.png" class="lbimage">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">12 / 20</div>
+                <img src="images/illust/Galaxaylien.png" class="lbimage">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">13 / 20</div>
+                <img src="images/illust/souljaboyFULLSIZE.png" class="lbimage">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">14 / 20</div>
+                <img src="images/illust/fsfsdf000.jpeg" class="lbimage">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">15 / 20</div>
+                <img src="images/illust/hellhorse.png" class="lbimage">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">16 / 20</div>
+                <img src="images/illust/SAM_1182.JPG" class="lbimage">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">17 / 20</div>
+                <img src="images/illust/cloverman.png" class="lbimage">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">18 / 20</div>
+                <img src="images/illust/seychokers.gif" class="lbimage">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">19 / 20</div>
+                <img src="images/illust/tabetai.png" class="lbimage">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">20 / 20</div>
+                <img src="images/illust/reindear-Copy.gif" class="lbimage">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+
+            <dic class="galleryscroll">
+                <div class="column">
+                    <img class="demo" src="images/thumbnail/alimermthumb.png" onclick="currentSlide(1)" alt="Original character reimagined as a Leafy Sea Dragon Seahorse mermaid.">
+                </div>
+                <div class="column">
+                    <img class="demo" src="images/thumbnail/succulentthumb.png" onclick="currentSlide(2)" alt="Succulent Girl, mixed media.">
+                </div>
+                <div class="column">
+                    <img class="demo" src="images/thumbnail/demonservantthumb.png" onclick="currentSlide(3)" alt="Demon Servant, mixed media.">
+                </div>
+                <div class="column">
+                    <img class="demo" src="images/thumbnail/angelselflessnessthumb.png" onclick="currentSlide(4)" alt="Foveat, Angel of Selflessness.">
+                </div>
+                <div class="column">
+                    <img class="demo" src="images/thumbnail/amputationthumb.png" onclick="currentSlide(5)" alt="Inktober/ Goretober 2016: Amputation.">
+                </div>
+                <div class="column">
+                    <img class="demo" src="images/thumbnail/hogguardthumb.png" onclick="currentSlide(6)" alt="Armor and weapon design exercise.">
+                </div>
+                <div class="column">
+                    <img class="demo" src="images/thumbnail/beeltethumb.png" onclick="currentSlide(7)" alt="Beetle, blue.">
+                </div>
+                <div class="column">
+                    <img class="demo" src="images/thumbnail/bedheadthumb.png" onclick="currentSlide(8)" alt="For some reason, he remembered the wallpaper with perfect clarity.">
+                </div>
+                <div class="column">
+                    <img class="demo" src="images/thumbnail/blueberrythumb.png" onclick="currentSlide(9)" alt="Practice making a brush and using it in an illustration.">
+                </div>
+                <div class="column">
+                    <img class="demo" src="images/thumbnail/choppitythumb.png" onclick="currentSlide(10)" alt="Inktober/ Goretober 2016: Decapitation. See a video of how it works here: https://www.behance.net/gallery/49332885/Choppity">
+                </div>
+                <div class="column">
+                    <img class="demo" src="images/thumbnail/digiwitchthumb.png" onclick="currentSlide(11)" alt="Cats and magic were always linked, and switching magic for the digital was no sweat.">
+                </div>
+                <div class="column">
+                    <img class="demo" src="images/thumbnail/galaxyalienthumb.png" onclick="currentSlide(12)" alt="Galaxaylien.">
+                </div>
+                <div class="column">
+                    <img class="demo" src="images/thumbnail/guardthumb.png" onclick="currentSlide(13)" alt="Experimenting with different styles.">
+                </div>
+                <div class="column">
+                    <img class="demo" src="images/thumbnail/heartfeltthumb.png" onclick="currentSlide(14)" alt="Inktober/ Goretober 2016: Trophy.">
+                </div>
+                <div class="column">
+                    <img class="demo" src="images/thumbnail/hellhorsethumb.png" onclick="currentSlide(15)" alt="If you could keep a Brook Horse down, it'd be forced to work for you.">
+                </div>
+                <div class="column">
+                    <img class="demo" src="images/thumbnail/limbsthumb.png" onclick="currentSlide(16)" alt="Inktober/ Goretober 2016: Many limbs.">
+                </div>
+                <div class="column">
+                    <img class="demo" src="images/thumbnail/russianroulettethumb.png" onclick="currentSlide(17)" alt="Inspired by Red Velvet's <i>Russian Roulette</i>.">
+                </div>
+                <div class="column">
+                    <img class="demo" src="images/thumbnail/seythumb.png" onclick="currentSlide(18)" alt="Chokers.">
+                </div>
+                <div class="column">
+                    <img class="demo" src="images/thumbnail/tabetaithumb.png" onclick="currentSlide(19)" alt="Insatiable.">
+                </div>
+                <div class="column">
+                    <img class="demo" src="images/thumbnail/bouncethumb.png" onclick="currentSlide(20)" alt="Christmas animation.">
+                </div>
+            </dic>
+        </div>
+    </div>
 </body>
 
 </html>
