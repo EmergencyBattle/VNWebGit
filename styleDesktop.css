@@ -32,19 +32,26 @@ body {
     visibility: hidden;
 }
 
+.logo {
+    position: absolute;
+    width: 10%;
+    height: auto;
+    bottom: 17%;
+    left: 8%
+    }
+
 .logoimage {
-    height: 15%;
+    position: absolute;
     display: block;
     margin-left: auto;
     margin-right:auto;
-    bottom: 13%;
-    left:-83%; 
+    width: 100%;
+    height: auto;
 }
 
 .characterimage {
     height: 100%;
 }
-
 
 .textboxspeechimagebox {
     position: fixed;
@@ -62,7 +69,6 @@ body {
     margin-right: auto;
 }
 
-
 .textboxspeechtext {
     left:0;
     right:0;
@@ -75,40 +81,92 @@ body {
     visibility: visible;
 }
 
+.clicktocontinue{
+    position: relative;
+    width: 100vw;
+    height: 10%;
+    margin: auto;
+    right: auto;
+    left: auto;
+    padding-top: 13%;
+    padding-left: 95%;
+
+    visibility: visible;
+    z-index: 500;
+    font-family: 'PT Sans', sans-serif;
+    color: #000000;
+    font-size: 1.3em;
+    user-select: none;
+    -webkit-text-stroke-width: 0.3px;
+    -webkit-text-stroke-color: #555555;
+}
+
+.highlight{
+    background-color: #fff2ac;
+    background-image: linear-gradient(to right, #ffe359 0%, #fff2ac 100%);
+}
+
+.homecross{
+    animation-name: opacitycross;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
+    position: absolute;
+    font-size: 2em;
+    margin-top: -0.7%;
+    padding-left: 0.5%;
+    visibility: visible;
+    color: #ff2c53;
+    -webkit-text-stroke-width: 0.3px;
+    -webkit-text-stroke-color: #ff2c53;
+}
+
+.dialogueoptionwrapper {
+    width: 100vw;
+    margin: 0px;
+    margin-top: -5%;
+}
+
 .optionwrapper {
-    width: 90%;
+    width: 100%;
     display: block;
+
     left: auto;
     right: auto;
     margin-left: auto;
-    margin-right:auto;
+    margin-right: auto;
     margin-top: -2%;
-    }
+}
+
+.dowinner {
+    position: relative;
+}
     
 .optionsimage {
     visibility: hidden;
     z-index:51;
-    width: 80%;
+    width: 70%;
     /*margin: -0.5%;*/
     display: block;
     margin: auto;
     left: auto;
     right: auto;
-    }
+}
 
 .optionstext {
     position:fixed;
     display: block;
-    margin-left: 5%;
+    margin-left: 10%;
     margin-right:auto;
-    margin-top:-4%;
+    margin-top:-3.6%;
     left:auto;
     right:auto;
     width:90%;
     padding-top:0%;
     padding-bottom:20px;
     padding-right:50px;
-    padding-left: 10%;
+    padding-left: 15%;
     
     
     font-family: 'PT Sans', sans-serif;
@@ -117,8 +175,14 @@ body {
     font-size: 1.3em;
     }
 
+.screen {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
 .gallery {
-    display: block;
+    position: relative;
     max-width: 77%;
     margin-left:auto;
     margin-right:auto;
@@ -128,8 +192,7 @@ body {
     /*border: dashed;
     border-width: 2px;
     border-color: red;*/
-    max-height: 650px;
-
+    height: 60%;
     overflow-y: scroll;
     }
 
@@ -159,6 +222,7 @@ body {
     animation-duration: 0.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    cursor: pointer;
 }
 
 .row > .column {
@@ -282,6 +346,7 @@ body {
   padding: 8px 12px;
   position: absolute;
   top: 0;
+  opacity: 0.0;
 }
 
 #caption {
@@ -334,16 +399,19 @@ img.hover-shadow {
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    background-color: rgba(0,0,0,0.85); /* Black w/ opacity */
 }
 
 /* Modal Content/Box */
 .projectmodal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 5% auto; /* 15% from the top and centered */
     padding: 20px;
+    padding-bottom: 3%;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    max-height: 80%;
+    width: 70%; /* Could be more or less, depending on screen size */
+    overflow: auto;
 }
 
 /* The Close Button */
@@ -361,6 +429,209 @@ img.hover-shadow {
     cursor: pointer;
 }
 
+h1 {
+    font-family: 'PT Sans', sans-serif;
+    color: #ff2c53;
+    font-size: 3em;
+    margin-left: 6%;
+    margin-right: 6%;
+    margin-top: 5%;
 }
 
+h2 {
+    font-family: 'PT Sans', sans-serif;
+    color: #3e3e3e;
+    font-size: 2em;
+    margin-left: 6%;
+    margin-right: 6%;
+    margin-top: -1.5%;
+    margin-bottom: 4%;
+}
 
+p {
+    font-family: 'PT Sans', sans-serif;
+    color: #121212;
+    font-size: 1.3em;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.modalimage{
+    max-width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    left: auto;
+    right: auto;
+}
+
+.caption {
+    font-family: 'PT Sans', sans-serif;
+    color: #555555;
+    font-size: 1em;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+    font-style: italic;
+    margin-top: 1%;
+    margin-bottom: 3%;
+}
+
+.ctc{
+    font-family: 'PT Sans', sans-serif;
+    color: #ff2c53;
+    font-size: 2em;
+    display: block;
+    text-align: center;
+    margin-left:auto;
+    margin-right: auto;
+    left: auto;
+    right: auto;
+    opacity: 0.8;
+}
+
+.ctc:hover {
+    cursor: pointer;
+}
+
+.cross{
+    animation-name: opacitycross;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
+    margin-left: -5%;
+    margin-right: -5%;
+}
+
+@keyframes opacitycross {
+    0% {opacity: 0.3}
+    50% {opacity: 1.0}
+    100% {opacity: 0.3}
+    }
+
+.about{
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    left: auto;
+    right: auto;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    max-height: 90vh;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: 40%;
+}
+
+.aboutcontainer{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    left: auto;
+    right: auto;
+    width: 100%;
+}
+
+.aboutbubble {
+    display: block;
+    position:relative;
+    float: left;
+    margin-left: auto;
+    margin-right: auto;
+    left: auto;
+    right: auto;
+    width: inherit;
+    height: inherit;
+}
+
+.abouttextcontainer{
+    position: absolute;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    left: auto;
+    right: auto;
+    height: 75vh;
+    width: 100%;
+    padding: 10%;
+}
+
+.abouttext {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 2%;
+    left: auto;
+    right: auto;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+
+    font-family: 'PT Sans', sans-serif;
+    color: #555555;
+    font-size: 1.3em;
+}
+
+.aboutcharacter {
+    position: fixed;
+    height: auto;
+    width: auto;
+    max-height: 100vh;
+    max-width: 40vw;
+    left: -3%;
+    bottom:0%;
+}
+
+.socialmedia {
+    position: absolute;
+    top: 15%;
+    right: 20%;
+
+    }
+
+.sociallink {
+    font-family: 'PT Sans', sans-serif, bold;
+    font-size:1.5em;
+    color:white;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: #000000;
+    text-decoration: none;
+
+}
+
+.sociallist {
+    list-style-type: none;
+}
+
+.profileimage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:3%;
+    width:40%;
+    height: auto;
+    border-radius: 500px;
+}
+
+.shopdiv{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: auto;
+    right: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+
+}
+
+.shopimage{
+    display: block;
+    left: auto;
+    right: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+}
