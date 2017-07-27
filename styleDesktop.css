@@ -1,6 +1,6 @@
 ﻿
 
-@media only screen and (min-width: 770px) and (min-height: 800px) and (orientation: landscape) {
+@media only screen and (min-width: 770px) and (min-height: 750px) and (orientation: landscape) {
     /* For desktop: */
     .col-1 {width: 8.33%;}
     .col-2 {width: 16.66%;}
