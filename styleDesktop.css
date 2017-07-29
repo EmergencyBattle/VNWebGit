@@ -49,6 +49,10 @@ body {
     height: auto;
 }
 
+.mobilelogo {
+    visibility: hidden;
+}
+
 .characterimage {
     height: 100%;
 }

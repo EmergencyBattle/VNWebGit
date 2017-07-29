@@ -50,7 +50,7 @@
 
 </head>
 
-<body onclick="characterDialogue()">
+<body>
 
     <div class="header">
         <link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
@@ -59,6 +59,10 @@
     
     <div class="logo">
         <a href="home.htm"><img class="logoimage" src="images/logo.png" alt="logo in the shape of a stylised manatee sliced in half with a simple flower as eyes and tail pattern"></a>
+    </div>
+
+    <div class="mobilelogo" onclick="menuclick()">
+        <img class="logoimage"  src="images/logo.png" alt="logo in the shape of a stylised manatee sliced in half with a simple flower as eyes and tail pattern">
     </div>
     
     <div class="menubar">
@@ -72,36 +76,26 @@
 
     <div class="mobilemenu">
         <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
-        <div class="columnLeft">
-            <a href="home.htm"><img class="buttonimage" src="images/BtnHome.png" alt="Home Button"></a>
-            <a href="games.htm"><img class="buttonimage" src="images/BtnGames.png" alt="Games Button"></a>
-        </div>
-        <div class="columnRight">
-            <a href="illustrations.htm"><img class="buttonimage" src="images/BtnIllustration.png" alt="Illustrations Button"></a>
-            <a href="about.htm"><img class="buttonimage" src="images/BtnAbout.png" alt="About Button"></a>
-        </div>
-        <div class="columnMiddle">
-            <a href="shop.htm"><img class="buttonimage" src="images/BtnShop.png" alt="Shop Button"></a>
-        </div>
+            <a href="home.htm"><img class="buttonhome" id="buttonhome" src="images/BtnHome.png" alt="Home Button"></a>
+            <a href="games.htm"><img class="buttongames" id="buttongames" src="images/BtnGames.png" alt="Games Button"></a>
+            <a href="illustrations.htm"><img class="buttonillust" id="buttonillust" src="images/BtnIllustration.png" alt="Illustrations Button"></a>
+            <a href="about.htm"><img class="buttonabout" id="buttonabout" src="images/BtnAbout.png" alt="About Button"></a>
+            <a href="shop.htm"><img class="buttonshop" id="buttonshop" src="images/BtnShop.png" alt="Shop Button"></a>
     </div>
 
-    <div class="textbox">
+    <div class="textbox" onclick="characterDialogue()">
             <picture class="textboxspeechimagebox">
                 <source srcset="images/textboxspeech.png" media="(min-width: 769px)">
                 <source srcset="images/textboxspeech.png" media="(min-width: 600px) and (orientation: landscape)">
-                <source srcset="images/SpeechBubbleiPad.png" media="(min-width: 600px) and (orientation: portrait)">
+                <source srcset="images/textboxspeech.png" media="(min-width: 600px) and (orientation: portrait)">
                 <source srcset="images/textboxspeech.png" media="(min-width: 300px) and (orientation: landscape)">
-                <img class="textboximage" src="images/SpeechBubbleiPad.png" alt="textbox for speech">
+                <img class="textboximage" src="images/SpeechBubblemobile.png" alt="textbox for speech">
             </picture>
             <div class="textboxspeechtext">
                 <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type = "text/css">
                     <p id="changetext"></p>
             </div>
             <div class="clicktocontinue">click to continue <span class="homecross">+</span></div>
-            <div class="portraittext">
-                <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type = "text/css">
-                    Please turn your device on its side into landscape orientation! ( *uOu* )
-            </div>
     </div>
     
     <div class="dialogueoptionwrapper" id="dialogueoptionwrapper">
@@ -144,13 +138,14 @@
         </div>
     </div>
     
-    <picture class="character1">
-        <source srcset="images/Bruce.png" media="(min-width: 769px)">
+    <picture class="characterhome" onclick="characterDialogue()">
+        <source srcset="images/Bruce.png" media="(min-width: 750px)">
         <source srcset="images/Bruce.png" media="(min-width: 600px)">
-        <source srcset="images/mobilebanner.png">
+        <source srcset="images/Bruce.png">
         <img class="characterimage" src="images/Bruce.png" alt="Mobile banner">
     </picture>
     
+    <script type="text/javascript" src="VNWebMobileMenu.js"></script>
 </body>
 
 </html>

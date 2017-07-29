@@ -22,20 +22,22 @@
 html {
     /*background-image: url('images/clover.png');*/
     /*background-size: cover;*/
-    position:fixed; 
+    position:absolute; 
     /*font-family: "Lucida Sans", sans-serif;*/
 }
 
 body {
     background-image: url('images/DropDownBGMobile.png');
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
+    margin: 0%;
+    overflow: hidden;
     }
 
 .row:after {
     content: "";
     clear: both;
-    display: block;     
+    display: block;
 }
 
 .header {
@@ -46,12 +48,13 @@ body {
     -webkit-text-stroke-color: #000000;
     text-align:center;
 
-    position: fixed;
+    position: relative;
     display: block;
     z-index:55;
     margin-left:auto;
     margin-right:auto;
-    width: 100%;
+    top: 3%;
+    width: 100vw;
 }
 
 .menubar{
@@ -64,63 +67,80 @@ body {
 
 
 .mobilemenu{
-    position: fixed;
-    height: auto;
-    top: 25%;
-    left:auto;
-    right:auto;
-    margin-top: 2%;
-    margin-bottom: 2%;
+    position: relative;
+    height: 5%;
+    width: 80px;
+    top: 86vh;
+    left:0;
+    right:0;
     margin-left: auto;
     margin-right: auto;
-    padding: 5%;
+    z-index:3;
 }
 
-.buttoncontainer{
-
-    margin-left:auto;
-    margin-right:auto;
-    display: block;
-    left: auto;
-    right: auto;
-
-}
-
-.columnLeft {
-        position: fixed;
-        width: 50%;
-        height: auto;
-        left: 0;
-        padding-left: 10%;
-    }
-
-.columnRight {
-        position: fixed;
-        width: 50%;
-        height: auto;
-        right: 0;
-        padding-right: 10%;
-    }
-
-.columnMiddle {
-        position: fixed;
-        margin-left:20%;
-        width: 50%;
-        height: auto;
-        top: 67%;
-    }
-
-
-.buttonimage {
-    display: block;
+.buttonhome{
+    position: absolute;
     left: auto;
     right: auto;
     margin-left: auto;
     margin-right: auto;
-    z-index:1;
-    width: 130px;
+    width: 80px;
+    height: auto;
+    
+    margin-top: 100px;
+    opacity: 0.0;
+}
+
+.buttongames{
+    position: absolute;
+    left: auto;
+    right: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80px;
     height: auto;
 
+    margin-top: 100px;
+    opacity: 0.0;
+}
+
+.buttonillust{
+    position: absolute;
+    left: auto;
+    right: auto;
+    margin-left: auto;
+    margin-right: auto;
+        width: 80px;
+    height: auto;
+
+    margin-top: 100px;
+    opacity: 0.0;
+}
+
+.buttonabout{
+    position: absolute;
+    left: auto;
+    right: auto;
+    margin-left: auto;
+    margin-right: auto;
+        width: 80px;
+    height: auto;
+
+    margin-top: 100px;
+    opacity: 0.0;
+}
+
+.buttonshop{
+    position: absolute;
+    left: auto;
+    right: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80px;
+    height: auto;
+
+    margin-top: 100px;
+    opacity: 0.0;
 }
 
 .menubutton{
@@ -134,109 +154,188 @@ body {
 }
 
 .logo {
-    width: 100%;
-    height: 100%;
-    position: fixed;
+    width: 100vw;
+    height: 10vh;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    visibility: hidden;
+}
+
+.mobilelogo {
+    width: 100vw;
+    height: 10vh;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    visibility: visible;
 }
 
 .logoimage {
-    position:fixed;
-    height: 10%;
+    position:relative;
+    height: 100%;
     width: auto;
     display: block;
     margin-left: auto;
     margin-right:auto;
-    bottom: 2%;
-    left:0px;
-    right: 0px; 
-    z-index:1;
+    margin-top: 85vh;
+    left:0;
+    right: 0; 
+    z-index:10;
 }
 
-.character1 {
-    width: 100%;
-    height: 100%;
-    position: fixed;
+.characterhome {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0%;
+    z-index: 1;
 }
 
 .characterimage {
-    position:fixed;
+    position:absolute;
     height: auto;
-    width: 100%;
+    width: 100vw;
     display: block;
     margin-left: auto;
     margin-right:auto;
-    top: 7%;
-    left:0px;
-    right: 0px; 
+    left:0;
+    right: 0; 
     z-index:1;
+    bottom: 0%;
+    visibility: visible;
 }
 
 .textbox {
-    position: fixed;
-    top: 25%;
+    position: absolute;
+    top: 6%;
+    width: 100vw;
     z-index:2;
     }
     
 .textboxspeechimagebox {
-    position: fixed;
-    width:80%;
-    visibility: hidden;
+    position:relative;
+    width:100%;
+    visibility: visible;
+    margin-left: auto;
+    margin-right:auto;
+    left:0;
+    right:0;
+    z-index: 3;
 }
 
 .textboximage {
     display:block;
     z-index:2;
-    position:fixed;
     margin-left: auto;
     margin-right:auto;
     left:0;
     right:0;
-    width:90%;
+    width:95vw;
+    z-index: 3;
 }
 
 .textboxspeechtext {
-    visibility: hidden;
-    position:fixed;
-    margin-left: auto;
-    margin-right:auto;
-    left:0;
-    right:0;
-    width:0%;
-    padding-top:20%;
-    padding-bottom:20px;
-    padding-left:50px;
-    padding-right:50px;
-    
-    
-    font-family: 'PT Sans', sans-serif;
-    font-size:0em;
-}
-
-.portraittext {
-    visibility: hidden;
-    position:fixed;
+    visibility: visible;
+    position:absolute;
     margin-left: auto;
     margin-right:auto;
     left:0;
     right:0;
     width:90%;
-    padding-top:20%;
-    padding-bottom:20px;
-    padding-left:50px;
-    padding-right:50px;
+    top: 0%;
+    padding-top:7%;
+    padding-bottom:5%;
+    padding-left:11%;
+    padding-right:11%;
     
     
     font-family: 'PT Sans', sans-serif;
-    font-size:1.5em;
+    font-size:1.1em;
+    z-index: 4;
 }
+
+.homecross{
+    animation-name: opacitycross;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
+    position: absolute;
+    font-size: 2em;
+    margin-top: -61%;
+    padding-left: 0%;
+    margin-left: 47%;
+    visibility: visible;
+    color: #ff2c53;
+    -webkit-text-stroke-width: 0.3px;
+    -webkit-text-stroke-color: #ff2c53;
+}
+
+@keyframes opacitycross {
+    0% {opacity: 0.3}
+    50% {opacity: 1.0}
+    100% {opacity: 0.3}
+    }
 
 .dialogueoptionwrapper {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    margin-top: -5%;
     visibility: hidden;
+    background: rgba(0,0,0,0.8);
 }
 
+.optionwrapper {
+    width: 100%;
+    display: block;
+
+    left: auto;
+    right: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -2%;
+}
+
+.dowinner {
+    position: relative;
+}
+    
 .optionsimage {
+    visibility: hidden;
+    z-index:51;
+    width: 70%;
+    /*margin: -0.5%;*/
+    display: block;
+    margin: auto;
+    left: auto;
+    right: auto;
     visibility:hidden;
+}
+
+.optionstext {
+    position:fixed;
+    display: block;
+    margin-left: 10%;
+    margin-right:auto;
+    margin-top:-3.6%;
+    left:auto;
+    right:auto;
+    width:90%;
+    padding-top:0%;
+    padding-bottom:20px;
+    padding-right:50px;
+    padding-left: 15%;
+    
+    
+    font-family: 'PT Sans', sans-serif;
+    color: white;
+
+    font-size: 1.3em;
     }
+
 }
 /*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
