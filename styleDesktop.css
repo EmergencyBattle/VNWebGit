@@ -209,6 +209,8 @@ body {
 
     border-radius: 15px;
     opacity: 0.8;
+    width: 100%;
+    height: auto;
     }
 
     @keyframes opacity {
