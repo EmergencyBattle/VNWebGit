@@ -34,6 +34,13 @@
 
     }
 
+.mobilelogo {
+    visibility: hidden;
+}
+
+.mobilemenu {
+    visibility: hidden;
+}
 
 .textboximage {
     display:block;

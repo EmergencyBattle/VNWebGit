@@ -83,20 +83,7 @@
             <a href="shop.htm"><img class="buttonshop" id="buttonshop" src="images/BtnShop.png" alt="Shop Button"></a>
     </div>
 
-    <div class="textbox" onclick="characterDialogue()">
-            <picture class="textboxspeechimagebox">
-                <source srcset="images/textboxspeech.png" media="(min-width: 769px)">
-                <source srcset="images/textboxspeech.png" media="(min-width: 600px) and (orientation: landscape)">
-                <source srcset="images/textboxspeech.png" media="(min-width: 600px) and (orientation: portrait)">
-                <source srcset="images/textboxspeech.png" media="(min-width: 300px) and (orientation: landscape)">
-                <img class="textboximage" src="images/SpeechBubblemobile.png" alt="textbox for speech">
-            </picture>
-            <div class="textboxspeechtext">
-                <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type = "text/css">
-                    <p id="changetext"></p>
-            </div>
-            <div class="clicktocontinue">click to continue <span class="homecross">+</span></div>
-    </div>
+
     
     <div class="dialogueoptionwrapper" id="dialogueoptionwrapper">
         <div class="dowinner">
@@ -137,14 +124,31 @@
 </div>
         </div>
     </div>
+   
     
     <picture class="characterhome" onclick="characterDialogue()">
-        <source srcset="images/Bruce.png" media="(min-width: 750px)">
-        <source srcset="images/Bruce.png" media="(min-width: 600px)">
+        <source srcset="images/Bruce.png" onclick="characterDialogue()" media="(min-width: 750px)">
+        <source srcset="images/Bruce.png" onclick="characterDialogue()" media="(min-width: 600px)">
         <source srcset="images/Bruce.png">
         <img class="characterimage" src="images/Bruce.png" alt="Mobile banner">
     </picture>
-    
+
+    <div class="textbox">
+        <picture class="textboxspeechimagebox" onclick="characterDialogue()">
+            <source srcset="images/textboxspeech.png" onclick="characterDialogue()" media="(min-width: 769px)">
+            <source srcset="images/textboxspeech.png" onclick="characterDialogue()" media="(min-width: 600px) and (orientation: landscape)">
+            <source srcset="images/textboxspeech.png" onclick="characterDialogue()" media="(min-width: 600px) and (orientation: portrait)">
+            <source srcset="images/textboxspeech.png" media="(min-width: 300px) and (orientation: landscape)">
+            <img class="textboximage" src="images/SpeechBubblemobile.png" alt="textbox for speech">
+        </picture>
+        <div class="textboxspeechtext" onclick="characterDialogue()">
+            <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
+            <p id="changetext" media="(min-width: 600px)" ></p>
+            <p id="mobiletext">Hej, this is Emilia's portfolio site! You can find Emilia's best work here. Press the logo to open the menu.</p>
+        </div>
+        <div class="clicktocontinue" onclick="characterDialogue()">click to continue <span class="homecross">+</span></div>
+    </div>
+
     <script type="text/javascript" src="VNWebMobileMenu.js"></script>
 </body>
 

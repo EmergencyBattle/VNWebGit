@@ -85,6 +85,18 @@ body {
     visibility: visible;
 }
 
+#changetext {
+    position: relative;
+    visibility: visible;
+}
+
+#mobiletext{
+    position: absolute;
+    visibility: hidden;
+    top: 6%;
+    padding-top: 5%;
+}
+
 .clicktocontinue{
     position: relative;
     width: 100vw;
@@ -130,6 +142,7 @@ body {
     width: 100vw;
     margin: 0px;
     margin-top: -5%;
+    display: block;
 }
 
 .optionwrapper {
@@ -211,6 +224,7 @@ body {
     opacity: 0.8;
     width: 100%;
     height: auto;
+    max-width: 300px;
     }
 
     @keyframes opacity {
@@ -265,7 +279,7 @@ body {
 /* Modal Content */
 .modal-content {
   position: relative;
-  background-color: #fefefe;
+  background-color: #000000;
   margin: auto;
   padding: 0;
   width: 90%;
@@ -596,6 +610,10 @@ p {
     right: 20%;
 
     }
+
+#abouthomelink{
+    visibility: visible;
+}
 
 .sociallink {
     font-family: 'PT Sans', sans-serif, bold;

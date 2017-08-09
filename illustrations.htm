@@ -21,6 +21,18 @@
     <div class="logo">
         <a href="home.htm"><img class="logoimage" src="images/logo.png" alt="logo in the shape of a stylised manatee sliced in half with a simple flower as eyes and tail pattern"></a>
     </div>
+
+    <div class="mobilelogo" onclick="menuclick()">
+        <img class="logoimage" src="images/logo.png" alt="logo in the shape of a stylised manatee sliced in half with a simple flower as eyes and tail pattern">
+    </div>
+    <div class="mobilemenu">
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
+        <a href="home.htm"><img class="buttonhome" id="buttonhome" src="images/BtnHome.png" alt="Home Button"></a>
+        <a href="games.htm"><img class="buttongames" id="buttongames" src="images/BtnGames.png" alt="Games Button"></a>
+        <a href="illustrations.htm"><img class="buttonillust" id="buttonillust" src="images/BtnIllustration.png" alt="Illustrations Button"></a>
+        <a href="about.htm"><img class="buttonabout" id="buttonabout" src="images/BtnAbout.png" alt="About Button"></a>
+        <a href="shop.htm"><img class="buttonshop" id="buttonshop" src="images/BtnShop.png" alt="Shop Button"></a>
+    </div>
     
     <div class="menubar">
             <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type = "text/css">
@@ -153,7 +165,7 @@
                 <p id="caption"></p>
             </div>
 
-            <dic class="galleryscroll">
+            <div class="galleryscroll">
                 <div class="column">
                     <img class="demo" src="images/thumbnail/alimermthumb.png" onclick="currentSlide(1)" alt="Original character reimagined as a Leafy Sea Dragon Seahorse mermaid.">
                 </div>
@@ -217,9 +229,10 @@
                 <div class="column">
                     <img class="demo" src="images/thumbnail/tarpilthumb.png" onclick="currentSlide(21)" alt="Test of composition with a busy background.">
                 </div>
-            </dic>
+            </div>
         </div>
     </div>
-</body>
 
+    <script type="text/javascript" src="VNWebMobileMenu.js"></script>
+</body>
 </html>
