@@ -838,8 +838,10 @@ html {
 
 body {
     background-image: url('images/DropDownBGMobile.png');
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
     }
 
 .row:after {
@@ -861,20 +863,26 @@ body {
     z-index:5;
     margin-left:auto;
     margin-right:auto;
-    width: 100%;
+    width: 100vw;
 }
 
 .menubar{
     position: fixed;
-    bottom:2%;
-    right:5%;
+    visibility: visible;
+    top:83vh;
     z-index:50;
+    background-color: rgba(0,0,0,0.9);
+    border-radius: 5%;
+    width: 85vw;
+    margin-left: 100px;
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
 
 .menubutton{
     float:left;
     font-family: 'PT Sans', sans-serif, bold;
-    font-size:1.5em;
+    font-size:1.2em;
     color:white;
     margin-left: 20px;
     -webkit-text-stroke-width: 0.5px;
@@ -882,15 +890,16 @@ body {
 }
 
 .logo {
-    width: 100%;
-    height: 100%;
-    position: fixed;
+    width: 10vh;
+    height: auto;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
     z-index:20;
 }
 
 .logoimage {
-    position:fixed;
-    height: 15%;
+    height: 50px;
     width: auto;
     display: block;
     margin-left: 2%;
@@ -901,18 +910,12 @@ body {
 
 }
 
+.mobilelogo{
+    visibility: hidden;
+}
+    
 .mobilemenu{
-    position: fixed;
-    height: auto;
-    top: 5%;
-    left:auto;
-    right:auto;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 5%;
-    float: left;
+visibility: hidden;
 
 }
 
@@ -936,7 +939,14 @@ body {
 }
 
 .characterimage {
-    visibility: hidden;
+    position:absolute;
+    height: 80vh;
+    width: auto;
+    display: block;
+    left:10vw; 
+    z-index:1;
+    bottom: 0%;
+    visibility: visible;
 }
 
 .portraittext {
@@ -944,12 +954,539 @@ body {
 }
 
 .textbox {
-    visibility: hidden;
+    position: absolute;
+    top: 10%;
+    width: 100vw;
+    z-index:2;
     }
+    
+.textboxspeechimagebox {
+    position:relative;
+    width:100%;
+    visibility: visible;
+    margin-left: auto;
+    margin-right:auto;
+    left:0;
+    right:0;
+    z-index: 3;
+}
+
+.textboximage {
+    position: absolute;
+    display:block;
+    z-index:2;
+    margin: 0;
+    left:38vw;
+    width:60vw;
+    z-index: 3;
+}
+
+.textboxspeechtext {
+    visibility: visible;
+    position:absolute;
+    margin: 0;
+    left:38vw;
+    width:60vw;
+    top: 0%;
+    padding-top:5%;
+    padding-bottom:5%;
+    padding-left:11%;
+    padding-right:11%;
+    
+    
+    font-family: 'PT Sans', sans-serif;
+    font-size:1.1em;
+    z-index: 4;
+}
+
+#changetext {
+    position: relative;
+    visibility: hidden;
+}
+
+#mobiletext{
+    visibility: visible;
+    margin-top: -35%;
+}
+
+.homecross{
+
+    visibility: hidden;
+}
 
 .dialogueoptionwrapper {
     visibility: hidden;
     }
 
+.thumbnail {
+    float: left;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top:1%;
+    margin-bottom:1%;
+
+    border-radius: 15px;
+    opacity: 0.8;
+    width: 20%;
+    height: auto;
+    }
+
+    @keyframes opacity {
+    0% {opacity: 0.8}
+    100% {opacity: 1.0}
+    }
+
+    @-webkit-keyframes opacity {
+    0% {opacity: 0.8}
+    100% {opacity: 1.0}
+    }
+
+.thumbnail:hover {
+    animation-name: opacity;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+}
+
+.screen{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.gallery {
+    position: relative;
+    max-width: 90vw;
+    margin-left:auto;
+    margin-right:auto;
+    left: auto;
+    right: auto;
+    margin-top: 17%;
+    bottom: 10vh;
+    /*border: dashed;
+    border-width: 2px;
+    border-color: red;*/
+    height: 70vh;
+    overflow-y: scroll;
+    }
+
+/* The Gallery Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 50;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #000000;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 600px;
+  height: 100vh;
+}
+
+.lbimage {
+    display:block;
+    margin:auto;
+    margin-top:-10%;
+    left: auto;
+    right: auto; 
+    height: auto;
+    width: auto;
+    max-height: 65vh;
+    max-width: 80vw;
+}
+
+.galleryscroll{
+    visibility: hidden;
+    height: 700px;
+    max-width: 700px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    background-color: black;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 1%;
+  right: 5%;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+  background-color: #000000;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 5px;
+  margin-top: -10%;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  opacity: 0.0;
+}
+
+#caption {
+  font-family: 'PT Sans', sans-serif;
+  font-size:1em;
+  color:white;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+img.demo {
+  display: inline;
+  white-space: normal;
+  opacity: 0.6;
+  width: auto;
+  height: auto;
+  max-height: 150px;
+  max-width: 150px;
+  font-family: 'PT Sans', sans-serif;
+  font-size:1em;
+  color:white;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+
+/* The Projects Modal (background) */
+.projectmodal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 50; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.85); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.projectmodal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* 15% from the top and centered */
+    margin-top: 5%;
+    padding: 20px;
+    padding-bottom: 3%;
+    border: 1px solid #888;
+    max-height: 75vh;
+    width: 90vw; /* Could be more or less, depending on screen size */
+    overflow: auto;
+}
+
+/* The Close Button */
+.projectclose {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.projectclose:hover,
+.projectclose:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+h1 {
+    font-family: 'PT Sans', sans-serif;
+    color: #ff2c53;
+    font-size: 2em;
+    margin-left: 6%;
+    margin-right: 6%;
+    margin-top: 5%;
+}
+
+h2 {
+    font-family: 'PT Sans', sans-serif;
+    color: #3e3e3e;
+    font-size: 1em;
+    margin-left: 6%;
+    margin-right: 6%;
+    margin-top: -2%;
+    margin-bottom: 6%;
+}
+
+p {
+    font-family: 'PT Sans', sans-serif;
+    color: #121212;
+    font-size: 0.9em;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.modalimage{
+    max-width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    left: auto;
+    right: auto;
+}
+
+.caption {
+    font-family: 'PT Sans', sans-serif;
+    color: #555555;
+    font-size: 0.9em;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+    font-style: italic;
+    margin-top: 1%;
+    margin-bottom: 3%;
+}
+
+.ctc{
+    font-family: 'PT Sans', sans-serif;
+    color: #ff2c53;
+    font-size: 2em;
+    display: block;
+    text-align: center;
+    margin-left:auto;
+    margin-right: auto;
+    left: auto;
+    right: auto;
+    opacity: 0.8;
+}
+
+
+
+.ctc:hover {
+    cursor: pointer;
+}
+
+.clicktocontinue{
+    color: rgba( 0, 0, 0, 0);
+}
+
+.cross{
+    animation-name: opacitycross;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+@keyframes opacitycross {
+    0% {opacity: 0.3}
+    50% {opacity: 1.0}
+    100% {opacity: 0.3}
+    }
+
+
+.about{
+    display: block;
+    position:absolute;
+    margin-left: 0;
+    margin-right: 0;
+    left: auto;
+    right: auto;
+    height: 90vh;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: 100vw;
+    top: 0vh;
+}
+
+.aboutcontainer{
+    position:absolute;
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 1%;
+    width: 100%;
+    height: 70vh;
+}
+
+.aboutbubble {
+    display: block;
+    position:relative;
+    margin-right: auto;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+    width: auto;
+    height: 70vh;
+}
+
+.abouttextcontainer{
+    display: block;
+    position:relative;
+    margin-right: auto;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+    width: auto;
+    height: 70vh;
+    width: 40vw;
+    top: -70vh;
+    padding: 3%;
+}
+
+.abouttext {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 2%;
+    left: auto;
+    right: auto;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+
+    font-family: 'PT Sans', sans-serif;
+    color: #555555;
+    font-size: 1em;
+}
+
+.aboutcharacter {
+    position: fixed;
+    height: auto;
+    width: auto;
+    max-height: 80vh;
+    max-width: 30vw;
+    left: 0%;
+    bottom:0%;
+}
+
+.socialmedia {
+    position: absolute;
+    bottom: 20%;
+    right: 7%;
+    background-color: rgba(0,0,0,0.9);
+    border-radius: 5%;
+    }
+
+#abouthomelink{
+    display:none;
+}
+
+.sociallink {
+    font-family: 'PT Sans', sans-serif, bold;
+    font-size:1em;
+    color:white;
+    /*-webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: white;*/
+    text-decoration: none;
+    -webkit-padding-start: 0;
+}
+
+.sociallist {
+    list-style-type: none;
+    -webkit-padding-start: 10px;
+    -webkit-margin-end:10px;
+    -webkit-margin-before: 5px;
+    -webkit-margin-after: 10px;
+}
+
+.profileimage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:3%;
+    width:40%;
+    height: auto;
+    border-radius: 500px;
+}
+
+.shopdiv{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    left: auto;
+    right: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+
+}
+
+.shopimage{
+    display: block;
+    left: auto;
+    right: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: 30vh;
+}
 }
 
