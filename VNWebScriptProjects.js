@@ -7,6 +7,7 @@ var istwtmodal = document.getElementById("istwtModal");
 var lumbermodal = document.getElementById("lumberModal");
 var mycellmodal = document.getElementById("mycellModal");
 var ppmodal = document.getElementById("ppModal");
+var awdmodal = document.getElementById("awdModal");
 
 
 // Get the button that opens the modal
@@ -18,6 +19,7 @@ var istwtthumb = document.getElementById("istwt");
 var lumberthumb = document.getElementById("lumber");
 var mycellthumb = document.getElementById("mycell");
 var ppthumb = document.getElementById("pp");
+var awdthumb = document.getElementById("awd");
 
 // Get the <span> element that closes the modal
 //var thesisClose = document.getElementById("thesisclose");
@@ -36,6 +38,8 @@ var mycellClose = document.getElementById("mycellclose");
 var mycellCtc = document.getElementById("mycellctc");
 var ppClose = document.getElementById("ppclose");
 var ppCtc = document.getElementById("ppctc");
+var awdClose = document.getElementById("awdclose");
+var awdCtc = document.getElementById("awdctc");
 
 // When the user clicks on the button, open the modal
 //thesisthumb.onclick = function () {
@@ -61,6 +65,9 @@ mycellthumb.onclick = function () {
 }
 ppthumb.onclick = function () {
     ppmodal.style.display = "block";
+}
+awdthumb.onclick = function () {
+    awdmodal.style.display = "block";
 }
 
 // When the user clicks on <span> (x), close the modal
@@ -112,6 +119,12 @@ ppClose.onclick = function () {
 ppCtc.onclick = function () {
     ppmodal.style.display = "none";
 }
+awdClose.onclick = function () {
+    awdmodal.style.display = "none";
+}
+awdCtc.onclick = function () {
+    awdmodal.style.display = "none";
+}
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
@@ -138,5 +151,8 @@ window.onclick = function (event) {
     }
     if (event.target == ppmodal) {
         ppmodal.style.display = "none";
+    }
+	if (event.target == awdmodal) {
+        awdmodal.style.display = "none";
     }
 }
