@@ -40,6 +40,28 @@ body {
     display: block;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(255, 44, 83, 0.3);
+	border-radius: 5px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+	width: 8px;
+    background: rgba(255, 44, 83, 0.8);
+	border-radius: 4px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	width: 8px;
+    background: rgba(255, 44, 83, 1.0);
+	border-radius: 4px;
+}
+
 .header {
     font-family: "VT323", sans-serif;
     font-size: 2em;
@@ -848,6 +870,29 @@ body {
     content: "";
     clear: both;
     display: block;     
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+	left: 5px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(255, 44, 83, 0.3);
+	border-radius: 5px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+	max-width: 8px;
+    background: rgba(255, 44, 83, 0.8);
+	border-radius: 4px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	width: 8px;
+    background: rgba(255, 44, 83, 1.0);
+	border-radius: 4px;
 }
 
 .header {
