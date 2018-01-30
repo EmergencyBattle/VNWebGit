@@ -627,9 +627,13 @@ p {
 .socialmedia {
     position: absolute;
     top: 15vh;
-    right: 17%;
+    right: 12%;
     background-color: rgba(0,0,0,0);
     }
+
+.mastodonembed{
+	display: block;
+}
 
 #abouthomelink{
     display: block; 

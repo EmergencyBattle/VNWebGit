@@ -788,6 +788,10 @@ p {
     bottom:0%;
 }
 
+.mastodonembed{
+	display: none;
+}
+
 .socialmedia {
     position: absolute;
     bottom: 15%;

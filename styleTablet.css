@@ -16,7 +16,9 @@
     .col-m-11 {width: 91.66%;}
     .col-m-12 {width: 100%;}
     
-
+.mastodonembed{
+	display: none;
+}
     
 .header {
     font-size: 5em;
